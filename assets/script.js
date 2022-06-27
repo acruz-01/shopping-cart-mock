@@ -1,17 +1,17 @@
-// update quantity
+// quantity update
 function quanUpdate(showQuantity) {
     let quantity = document.querySelector('.total-quantity');
     quantity.innerHTML = showQuantity;
 }
 
-// Start quantity at 1 since product is in cart
+// Initial quantity 
 let quantity = 1
 
-// Buttons
+// add and minus buttons
 const quanMinus = document.querySelector('#quantity-down')
 const quanPlus = document.querySelector('#quantity-up')
 
-// add event listener to decrease quantity
+// event listener for decrease quantity
 quanMinus.addEventListener('click', function(e){
     if (quantity > 0) {
         quantity--
@@ -19,7 +19,7 @@ quanMinus.addEventListener('click', function(e){
     quanUpdate(`Quantity: ${quantity}`)
 })
 
-// add event listener to increase quantity
+// even listener for increase quantity
 quanPlus.addEventListener('click', function(){
     quantity++
     quanUpdate(`Quantity: ${quantity}`)
